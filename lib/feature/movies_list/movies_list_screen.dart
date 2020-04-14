@@ -1,23 +1,24 @@
-import 'package:filmguru/data/model/movie_item.dart';
-import 'package:filmguru/data/movies_mock_list.dart';
+import 'package:filmguru/feature/movies_list/bloc/bloc.dart';
 import 'package:filmguru/feature/movies_list/widgets/movie_item_row.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MoviesListScreen extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Filmguru"),
-      ),
-      body: _body(context),
-    );
+    return BlocBuilder(builder: (context, state) {
+      return Scaffold(
+        appBar: AppBar(
+          title: Text("Filmguru"),
+        ),
+        body: _body(state),
+      );
+    });
   }
 
-  ListView _body(BuildContext context) => ListView.builder(
-      itemCount: moviesMockList.length,
+  ListView _body(MoviesListState moviesListState) => ListView.builder(
+      itemCount: moviesListState.moviesList.length,
       itemBuilder: (context, index) {
-        return MovieItemRow(moviesMockList[index]);
+        return MovieItemRow(moviesListState.moviesList[index]);
       });
 }

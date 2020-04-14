@@ -1,9 +1,7 @@
-import 'package:filmguru/data/model/movie_item.dart';
-import 'package:filmguru/data/movies_mock_list.dart';
+import 'package:filmguru/data/api/model/movie_item_response.dart';
 
-class MoviesService {
-  Future<List<MovieItem>> getMovies() async {
-    Future.delayed(Duration(seconds: 1));
-    return moviesMockList;
-  }
+import 'model/movies_response.dart';
+
+abstract class MoviesService {
+  Future<List<MovieItemResponse>> getMovies();
 }

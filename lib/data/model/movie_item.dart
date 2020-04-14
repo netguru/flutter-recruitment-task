@@ -1,6 +1,6 @@
 class MovieItem {
 
-  MovieItem(this.id, this.title, this.poster);
+  MovieItem({this.id, this.title, this.poster});
 
   final String id;
   final String title;
