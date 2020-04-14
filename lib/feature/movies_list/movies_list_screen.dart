@@ -6,7 +6,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class MoviesListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder(builder: (context, state) {
+    return BlocBuilder(
+        bloc:BlocProvider.of<MoviesListBloc>(context),
+        builder: (context, state) {
       return Scaffold(
         appBar: AppBar(
           title: Text("Filmguru"),
