@@ -6,7 +6,6 @@ part 'movies_response.g.dart';
 
 @JsonSerializable()
 class MoviesResponse {
-
   MoviesResponse(this.results);
 
   final List<MovieItemResponse> results;

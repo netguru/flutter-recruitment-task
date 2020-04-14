@@ -38,13 +38,11 @@ class MovieItemRow extends StatelessWidget {
 
   Widget _title(BuildContext context) => Flexible(
       child: Container(
-      padding: EdgeInsets.all(AppDimensions.spacingNormal),
-      child:
-        Text(
-          _movie.title,
-          overflow: TextOverflow.ellipsis,
-          maxLines: 2,
-          style: AppTextStyles.mediumText().copyWith(color: AppColors.white),
-        )
-      ));
+          padding: EdgeInsets.all(AppDimensions.spacingNormal),
+          child: Text(
+            _movie.title,
+            overflow: TextOverflow.ellipsis,
+            maxLines: 2,
+            style: AppTextStyles.mediumText().copyWith(color: AppColors.white),
+          )));
 }

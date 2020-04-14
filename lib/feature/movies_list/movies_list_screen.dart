@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MoviesListScreen extends StatelessWidget {
-
   MoviesListBloc _bloc;
 
   @override
@@ -14,18 +13,19 @@ class MoviesListScreen extends StatelessWidget {
     return BlocBuilder(
         bloc: _bloc,
         builder: (context, state) {
-      return Scaffold(
-        appBar: AppBar(
-          title: Text("Filmguru"),
-        ),
-        body: _body(state),
-      );
-    });
+          return Scaffold(
+            appBar: AppBar(
+              title: Text("Filmguru"),
+            ),
+            body: _body(state),
+          );
+        });
   }
 
+  //TODO: Display list from state
   ListView _body(MoviesListState moviesListState) => ListView.builder(
-      itemCount: moviesListState.moviesList.length,
+      itemCount: List().length,
       itemBuilder: (context, index) {
-        return MovieItemRow(moviesListState.moviesList[index]);
+        return MovieItemRow(List()[index]);
       });
 }

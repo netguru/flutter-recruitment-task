@@ -4,7 +4,6 @@ import 'package:filmguru/feature/movies_list/bloc/bloc.dart';
 import '../../../repository/movies_repository.dart';
 
 class MoviesListBloc extends Bloc<MoviesListEvent, MoviesListState> {
-
   MoviesListBloc(this._moviesRepository);
 
   final MoviesRepository _moviesRepository;

@@ -1,14 +1,9 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 
-import '../../../data/model/movie_item.dart';
-
+@immutable
 class MoviesListState extends Equatable {
-  final List<MovieItem> moviesList;
-
-  MoviesListState(this.moviesList);
-
-  MoviesListState.initial() : this.moviesList = List();
-
   @override
-  List<Object> get props => [moviesList];
+  // TODO: implement props
+  List<Object> get props => null;
 }
