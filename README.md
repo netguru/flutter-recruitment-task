@@ -1,6 +1,6 @@
-# flutterapp
+# filmguru
 
-Netguru Flutter recruitment task
+Netguru Flutter recrutation app
 
 ## Getting Started
 
