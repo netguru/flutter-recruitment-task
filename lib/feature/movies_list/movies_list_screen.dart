@@ -4,10 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MoviesListScreen extends StatelessWidget {
+
+  MoviesListBloc _bloc;
+
   @override
   Widget build(BuildContext context) {
+    _bloc = BlocProvider.of<MoviesListBloc>(context);
+
     return BlocBuilder(
-        bloc:BlocProvider.of<MoviesListBloc>(context),
+        bloc: _bloc,
         builder: (context, state) {
       return Scaffold(
         appBar: AppBar(

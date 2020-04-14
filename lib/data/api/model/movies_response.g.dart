@@ -8,7 +8,11 @@ part of 'movies_response.dart';
 
 MoviesResponse _$MoviesResponseFromJson(Map<String, dynamic> json) {
   return MoviesResponse(
-    json['results'] as List,
+    (json['results'] as List)
+        ?.map((e) => e == null
+            ? null
+            : MovieItemResponse.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 

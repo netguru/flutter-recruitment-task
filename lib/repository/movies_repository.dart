@@ -9,6 +9,7 @@ class MoviesRepository {
 
   Future<List<MovieItem>> getMovies() async {
     return (await _moviesService.getMovies())
-        .map((movieItemResponse) => MoviesMapper.mapMovie(movieItemResponse));
+        .map((movieItemResponse) => MoviesMapper.mapMovie(movieItemResponse))
+        .toList();
   }
 }
