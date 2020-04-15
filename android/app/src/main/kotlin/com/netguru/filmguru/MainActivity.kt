@@ -1,4 +1,4 @@
-package com.netguru.flutterapp
+package com.netguru.filmguru
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
