@@ -8,6 +8,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   flutter_bloc: ^3.2.0
   bloc: ^3.0.0
   equatable: ^1.1.1
@@ -31,3 +33,5 @@ flutter:
 
   assets:
     - assets/mock/movies_response.json
+flutter_intl:
+  enabled: true
