@@ -8,18 +8,26 @@ import 'intl/messages_all.dart';
 // Made by Localizely
 // **************************************************************************
 
+// ignore_for_file: non_constant_identifier_names, lines_longer_than_80_chars
+// ignore_for_file: join_return_with_assignment, prefer_final_in_for_each
+// ignore_for_file: avoid_redundant_argument_values
+
 class S {
   S();
+  
+  static S current;
   
   static const AppLocalizationDelegate delegate =
     AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final String name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
-    final String localeName = Intl.canonicalizedLocale(name);
+    final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
+    final localeName = Intl.canonicalizedLocale(name); 
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
-      return S();
+      S.current = S();
+      
+      return S.current;
     });
   } 
 
@@ -27,6 +35,7 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Filmguru`
   String get mainAppBarTitle {
     return Intl.message(
       'Filmguru',
@@ -55,7 +64,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
 
   bool _isSupported(Locale locale) {
     if (locale != null) {
-      for (Locale supportedLocale in supportedLocales) {
+      for (var supportedLocale in supportedLocales) {
         if (supportedLocale.languageCode == locale.languageCode) {
           return true;
         }
