@@ -1,9 +1,12 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class AppTextStyles {
-  static TextStyle mediumText() {
+  static TextStyle title() {
     return TextStyle(
-      fontSize: 24.0,
+      fontSize: 28.0,
+      fontWeight: FontWeight.bold,
     );
   }
 }
