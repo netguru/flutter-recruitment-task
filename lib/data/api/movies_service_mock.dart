@@ -11,9 +11,12 @@ class MoviesServiceMock implements MoviesService {
 
   @override
   Future<List<MovieItemResponse>> getMovies() {
-    return rootBundle.loadStructuredData(moviesMockPath, (jsonStr) async {
-      final movies = MoviesResponse.fromJson(json.decode(jsonStr));
-      return movies.results;
-    });
+    return rootBundle.loadStructuredData(
+      moviesMockPath,
+      (jsonStr) async {
+        final movies = MoviesResponse.fromJson(json.decode(jsonStr));
+        return movies.results;
+      },
+    );
   }
 }

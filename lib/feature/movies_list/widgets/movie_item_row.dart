@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:filmguru/data/model/movie_item.dart';
 import 'package:filmguru/theme/app_colors.dart';
@@ -41,7 +40,7 @@ class MovieItemRow extends StatelessWidget {
         alignment: Alignment.bottomCenter,
         child: Container(
           color: AppColors.transparentBlack,
-          padding: EdgeInsets.all(AppDimensions.spacingNormal),
+          padding: const EdgeInsets.all(AppDimensions.spacingNormal),
           child: Row(
             children: [
               Text(
