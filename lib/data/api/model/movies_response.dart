@@ -9,7 +9,8 @@ part 'movies_response.g.dart';
 
 @freezed
 abstract class MoviesResponse with _$MoviesResponse {
-  factory MoviesResponse({List<MovieItemResponse> results}) = _MoviesResponse;
+  factory MoviesResponse({required List<MovieItemResponse> results}) =
+      _MoviesResponse;
 
   factory MoviesResponse.fromJson(Map<String, dynamic> json) =>
       _$MoviesResponseFromJson(json);

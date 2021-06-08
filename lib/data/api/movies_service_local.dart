@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 
 import 'movies_service.dart';
 
-class MoviesServiceMock implements MoviesService {
+class MoviesServiceLocal implements MoviesService {
   static final String moviesMockPath = "assets/mock/movies_response.json";
 
   @override

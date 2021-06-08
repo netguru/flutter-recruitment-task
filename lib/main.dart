@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RepositoryProvider(
-      create: (context) => MoviesRepository(MoviesServiceMock()),
+      create: (context) => MoviesRepository(MoviesServiceLocal()),
       child: MaterialApp(
         title: 'Filmguru',
         theme: AppTheme.theme,

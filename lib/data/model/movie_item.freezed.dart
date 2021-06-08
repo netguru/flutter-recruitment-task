@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'movie_item.dart';
 
@@ -9,35 +9,44 @@ part of 'movie_item.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
 class _$MovieItemTearOff {
   const _$MovieItemTearOff();
 
-  _MovieItem call({String id, String title, String poster}) {
+  _MovieItem call({required String title, required String poster}) {
     return _MovieItem(
-      id: id,
       title: title,
       poster: poster,
     );
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $MovieItem = _$MovieItemTearOff();
 
+/// @nodoc
 mixin _$MovieItem {
-  String get id;
-  String get title;
-  String get poster;
+  String get title => throw _privateConstructorUsedError;
 
-  $MovieItemCopyWith<MovieItem> get copyWith;
+  String get poster => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $MovieItemCopyWith<MovieItem> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $MovieItemCopyWith<$Res> {
   factory $MovieItemCopyWith(MovieItem value, $Res Function(MovieItem) then) =
       _$MovieItemCopyWithImpl<$Res>;
-  $Res call({String id, String title, String poster});
+
+  $Res call({String title, String poster});
 }
 
+/// @nodoc
 class _$MovieItemCopyWithImpl<$Res> implements $MovieItemCopyWith<$Res> {
   _$MovieItemCopyWithImpl(this._value, this._then);
 
@@ -47,26 +56,33 @@ class _$MovieItemCopyWithImpl<$Res> implements $MovieItemCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object title = freezed,
-    Object poster = freezed,
+    Object? title = freezed,
+    Object? poster = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      title: title == freezed ? _value.title : title as String,
-      poster: poster == freezed ? _value.poster : poster as String,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      poster: poster == freezed
+          ? _value.poster
+          : poster // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
 abstract class _$MovieItemCopyWith<$Res> implements $MovieItemCopyWith<$Res> {
   factory _$MovieItemCopyWith(
           _MovieItem value, $Res Function(_MovieItem) then) =
       __$MovieItemCopyWithImpl<$Res>;
+
   @override
-  $Res call({String id, String title, String poster});
+  $Res call({String title, String poster});
 }
 
+/// @nodoc
 class __$MovieItemCopyWithImpl<$Res> extends _$MovieItemCopyWithImpl<$Res>
     implements _$MovieItemCopyWith<$Res> {
   __$MovieItemCopyWithImpl(_MovieItem _value, $Res Function(_MovieItem) _then)
@@ -77,49 +93,41 @@ class __$MovieItemCopyWithImpl<$Res> extends _$MovieItemCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object title = freezed,
-    Object poster = freezed,
+    Object? title = freezed,
+    Object? poster = freezed,
   }) {
     return _then(_MovieItem(
-      id: id == freezed ? _value.id : id as String,
-      title: title == freezed ? _value.title : title as String,
-      poster: poster == freezed ? _value.poster : poster as String,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      poster: poster == freezed
+          ? _value.poster
+          : poster // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
-class _$_MovieItem with DiagnosticableTreeMixin implements _MovieItem {
-  _$_MovieItem({this.id, this.title, this.poster});
+/// @nodoc
 
-  @override
-  final String id;
+class _$_MovieItem implements _MovieItem {
+  _$_MovieItem({required this.title, required this.poster});
+
   @override
   final String title;
   @override
   final String poster;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'MovieItem(id: $id, title: $title, poster: $poster)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'MovieItem'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('title', title))
-      ..add(DiagnosticsProperty('poster', poster));
+  String toString() {
+    return 'MovieItem(title: $title, poster: $poster)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _MovieItem &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.title, title) ||
                 const DeepCollectionEquality().equals(other.title, title)) &&
             (identical(other.poster, poster) ||
@@ -129,24 +137,27 @@ class _$_MovieItem with DiagnosticableTreeMixin implements _MovieItem {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(title) ^
       const DeepCollectionEquality().hash(poster);
 
+  @JsonKey(ignore: true)
   @override
   _$MovieItemCopyWith<_MovieItem> get copyWith =>
       __$MovieItemCopyWithImpl<_MovieItem>(this, _$identity);
 }
 
 abstract class _MovieItem implements MovieItem {
-  factory _MovieItem({String id, String title, String poster}) = _$_MovieItem;
+  factory _MovieItem({required String title, required String poster}) =
+      _$_MovieItem;
 
   @override
-  String get id;
+  String get title => throw _privateConstructorUsedError;
+
   @override
-  String get title;
+  String get poster => throw _privateConstructorUsedError;
+
   @override
-  String get poster;
-  @override
-  _$MovieItemCopyWith<_MovieItem> get copyWith;
+  @JsonKey(ignore: true)
+  _$MovieItemCopyWith<_MovieItem> get copyWith =>
+      throw _privateConstructorUsedError;
 }
