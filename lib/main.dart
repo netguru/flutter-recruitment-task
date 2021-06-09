@@ -14,18 +14,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RepositoryProvider(
-        create: (context) => MoviesRepository(MoviesServiceMock()),
-        child: MaterialApp(
-          title: 'Filmguru',
-          theme: AppTheme.theme,
-          home: MoviesListScreen(),
-          localizationsDelegates: [
-            S.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-          ],
-          supportedLocales: S.delegate.supportedLocales,
-        ));
+      create: (context) => MoviesRepository(MoviesServiceLocal()),
+      child: MaterialApp(
+        title: 'Filmguru',
+        theme: AppTheme.theme,
+        home: MoviesListScreen(),
+        localizationsDelegates: [
+          S.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: S.delegate.supportedLocales,
+      ),
+    );
   }
 }

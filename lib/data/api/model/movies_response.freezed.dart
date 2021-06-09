@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'movies_response.dart';
 
@@ -8,30 +8,44 @@ part of 'movies_response.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 MoviesResponse _$MoviesResponseFromJson(Map<String, dynamic> json) {
   return _MoviesResponse.fromJson(json);
 }
 
+/// @nodoc
 class _$MoviesResponseTearOff {
   const _$MoviesResponseTearOff();
 
-  _MoviesResponse call({List<MovieItemResponse> results}) {
+  _MoviesResponse call({required List<MovieItemResponse> results}) {
     return _MoviesResponse(
       results: results,
     );
   }
+
+  MoviesResponse fromJson(Map<String, Object> json) {
+    return MoviesResponse.fromJson(json);
+  }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $MoviesResponse = _$MoviesResponseTearOff();
 
+/// @nodoc
 mixin _$MoviesResponse {
-  List<MovieItemResponse> get results;
+  List<MovieItemResponse> get results => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $MoviesResponseCopyWith<MoviesResponse> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $MoviesResponseCopyWith<MoviesResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $MoviesResponseCopyWith<$Res> {
   factory $MoviesResponseCopyWith(
           MoviesResponse value, $Res Function(MoviesResponse) then) =
@@ -39,6 +53,7 @@ abstract class $MoviesResponseCopyWith<$Res> {
   $Res call({List<MovieItemResponse> results});
 }
 
+/// @nodoc
 class _$MoviesResponseCopyWithImpl<$Res>
     implements $MoviesResponseCopyWith<$Res> {
   _$MoviesResponseCopyWithImpl(this._value, this._then);
@@ -49,16 +64,18 @@ class _$MoviesResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object results = freezed,
+    Object? results = freezed,
   }) {
     return _then(_value.copyWith(
       results: results == freezed
           ? _value.results
-          : results as List<MovieItemResponse>,
+          : results // ignore: cast_nullable_to_non_nullable
+              as List<MovieItemResponse>,
     ));
   }
 }
 
+/// @nodoc
 abstract class _$MoviesResponseCopyWith<$Res>
     implements $MoviesResponseCopyWith<$Res> {
   factory _$MoviesResponseCopyWith(
@@ -68,6 +85,7 @@ abstract class _$MoviesResponseCopyWith<$Res>
   $Res call({List<MovieItemResponse> results});
 }
 
+/// @nodoc
 class __$MoviesResponseCopyWithImpl<$Res>
     extends _$MoviesResponseCopyWithImpl<$Res>
     implements _$MoviesResponseCopyWith<$Res> {
@@ -80,21 +98,23 @@ class __$MoviesResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object results = freezed,
+    Object? results = freezed,
   }) {
     return _then(_MoviesResponse(
       results: results == freezed
           ? _value.results
-          : results as List<MovieItemResponse>,
+          : results // ignore: cast_nullable_to_non_nullable
+              as List<MovieItemResponse>,
     ));
   }
 }
 
+/// @nodoc
 @JsonSerializable()
 class _$_MoviesResponse
     with DiagnosticableTreeMixin
     implements _MoviesResponse {
-  _$_MoviesResponse({this.results});
+  _$_MoviesResponse({required this.results});
 
   factory _$_MoviesResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_MoviesResponseFromJson(json);
@@ -127,6 +147,7 @@ class _$_MoviesResponse
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(results);
 
+  @JsonKey(ignore: true)
   @override
   _$MoviesResponseCopyWith<_MoviesResponse> get copyWith =>
       __$MoviesResponseCopyWithImpl<_MoviesResponse>(this, _$identity);
@@ -138,14 +159,17 @@ class _$_MoviesResponse
 }
 
 abstract class _MoviesResponse implements MoviesResponse {
-  factory _MoviesResponse({List<MovieItemResponse> results}) =
+  factory _MoviesResponse({required List<MovieItemResponse> results}) =
       _$_MoviesResponse;
 
   factory _MoviesResponse.fromJson(Map<String, dynamic> json) =
       _$_MoviesResponse.fromJson;
 
   @override
-  List<MovieItemResponse> get results;
+  List<MovieItemResponse> get results => throw _privateConstructorUsedError;
+
   @override
-  _$MoviesResponseCopyWith<_MoviesResponse> get copyWith;
+  @JsonKey(ignore: true)
+  _$MoviesResponseCopyWith<_MoviesResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }
