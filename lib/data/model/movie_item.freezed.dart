@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'movie_item.dart';
 
@@ -30,7 +31,6 @@ const $MovieItem = _$MovieItemTearOff();
 /// @nodoc
 mixin _$MovieItem {
   String get title => throw _privateConstructorUsedError;
-
   String get poster => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -42,7 +42,6 @@ mixin _$MovieItem {
 abstract class $MovieItemCopyWith<$Res> {
   factory $MovieItemCopyWith(MovieItem value, $Res Function(MovieItem) then) =
       _$MovieItemCopyWithImpl<$Res>;
-
   $Res call({String title, String poster});
 }
 
@@ -77,7 +76,6 @@ abstract class _$MovieItemCopyWith<$Res> implements $MovieItemCopyWith<$Res> {
   factory _$MovieItemCopyWith(
           _MovieItem value, $Res Function(_MovieItem) then) =
       __$MovieItemCopyWithImpl<$Res>;
-
   @override
   $Res call({String title, String poster});
 }
@@ -127,18 +125,17 @@ class _$_MovieItem implements _MovieItem {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MovieItem &&
-            (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)) &&
-            (identical(other.poster, poster) ||
-                const DeepCollectionEquality().equals(other.poster, poster)));
+        (other.runtimeType == runtimeType &&
+            other is _MovieItem &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality().equals(other.poster, poster));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(poster);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(poster));
 
   @JsonKey(ignore: true)
   @override
@@ -151,11 +148,9 @@ abstract class _MovieItem implements MovieItem {
       _$_MovieItem;
 
   @override
-  String get title => throw _privateConstructorUsedError;
-
+  String get title;
   @override
-  String get poster => throw _privateConstructorUsedError;
-
+  String get poster;
   @override
   @JsonKey(ignore: true)
   _$MovieItemCopyWith<_MovieItem> get copyWith =>
