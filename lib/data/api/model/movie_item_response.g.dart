@@ -6,14 +6,13 @@ part of 'movie_item_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MovieItemResponse _$_$_MovieItemResponseFromJson(Map<String, dynamic> json) {
-  return _$_MovieItemResponse(
-    json['title'] as String,
-    json['poster_path'] as String,
-  );
-}
+_$_MovieItemResponse _$$_MovieItemResponseFromJson(Map<String, dynamic> json) =>
+    _$_MovieItemResponse(
+      json['title'] as String,
+      json['poster_path'] as String,
+    );
 
-Map<String, dynamic> _$_$_MovieItemResponseToJson(
+Map<String, dynamic> _$$_MovieItemResponseToJson(
         _$_MovieItemResponse instance) =>
     <String, dynamic>{
       'title': instance.title,

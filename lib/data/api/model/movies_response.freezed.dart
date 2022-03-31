@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'movies_response.dart';
 
@@ -26,7 +27,7 @@ class _$MoviesResponseTearOff {
     );
   }
 
-  MoviesResponse fromJson(Map<String, Object> json) {
+  MoviesResponse fromJson(Map<String, Object?> json) {
     return MoviesResponse.fromJson(json);
   }
 }
@@ -39,7 +40,6 @@ mixin _$MoviesResponse {
   List<MovieItemResponse> get results => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $MoviesResponseCopyWith<MoviesResponse> get copyWith =>
       throw _privateConstructorUsedError;
@@ -117,7 +117,7 @@ class _$_MoviesResponse
   _$_MoviesResponse({required this.results});
 
   factory _$_MoviesResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_MoviesResponseFromJson(json);
+      _$$_MoviesResponseFromJson(json);
 
   @override
   final List<MovieItemResponse> results;
@@ -138,14 +138,14 @@ class _$_MoviesResponse
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MoviesResponse &&
-            (identical(other.results, results) ||
-                const DeepCollectionEquality().equals(other.results, results)));
+        (other.runtimeType == runtimeType &&
+            other is _MoviesResponse &&
+            const DeepCollectionEquality().equals(other.results, results));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(results);
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(results));
 
   @JsonKey(ignore: true)
   @override
@@ -154,7 +154,7 @@ class _$_MoviesResponse
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MoviesResponseToJson(this);
+    return _$$_MoviesResponseToJson(this);
   }
 }
 
@@ -166,8 +166,7 @@ abstract class _MoviesResponse implements MoviesResponse {
       _$_MoviesResponse.fromJson;
 
   @override
-  List<MovieItemResponse> get results => throw _privateConstructorUsedError;
-
+  List<MovieItemResponse> get results;
   @override
   @JsonKey(ignore: true)
   _$MoviesResponseCopyWith<_MoviesResponse> get copyWith =>
