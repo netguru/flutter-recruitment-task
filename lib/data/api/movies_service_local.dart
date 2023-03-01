@@ -7,7 +7,7 @@ import 'package:flutter/services.dart';
 import 'movies_service.dart';
 
 class MoviesServiceLocal implements MoviesService {
-  static final String moviesMockPath = "assets/mock/movies_response.json";
+  static const String moviesMockPath = "assets/mock/movies_response.json";
 
   @override
   Future<List<MovieItemResponse>> getMovies() {

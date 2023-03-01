@@ -8,9 +8,11 @@ import 'data/api/movies_service_local.dart';
 import 'generated/l10n.dart';
 import 'repository/movies_repository.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return RepositoryProvider(
@@ -18,8 +20,8 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Filmguru',
         theme: AppTheme.theme,
-        home: MoviesListScreen(),
-        localizationsDelegates: [
+        home: const MoviesListScreen(),
+        localizationsDelegates: const [
           S.delegate,
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,

@@ -5,10 +5,6 @@ import 'package:filmguru/theme/app_dimensions.dart';
 import 'package:filmguru/theme/app_text_styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-
-import '../../../theme/app_colors.dart';
-import '../../../theme/app_dimensions.dart';
 
 class MovieItemRow extends StatelessWidget {
   MovieItemRow(this._movie);
