@@ -8,6 +8,6 @@ class AppTheme {
     appBarTheme: AppBarTheme(
       color: AppColors.accentColorDark,
     ),
-    accentColor: AppColors.accentColor,
+    hintColor: AppColors.accentColor,
   );
 }
