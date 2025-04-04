@@ -14,5 +14,4 @@ Application uses [Flutter Intl](https://plugins.jetbrains.com/plugin/13666-flutt
 
 ### Finished app screenshot
 
-![Screenshot1](https://raw.githubusercontent.com/netguru/flutter-recruitment-task/master/previews/Screenshot_1.png)
-
+<img alt="Screenshot1" src="previews/Screenshot_1.png" width="600"/>
